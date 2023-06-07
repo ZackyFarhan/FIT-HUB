@@ -1,0 +1,462 @@
+{
+	"info": {
+		"_postman_id": "8a77fbee-d772-4079-b282-9c5f963be893",
+		"name": "FIT HUB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8179149"
+	},
+	"item": [
+		{
+			"name": "List User",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('List User',()=>{",
+							"\tif(pm.response.to.have.status(200)){",
+							"\t\tlet response = pm.response.json();",
+							"\t}",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "App-ID",
+						"value": "{{App-ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Device-ID",
+						"value": "{{Device-ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Device-Type",
+						"value": "{{Device-Type}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				},
+				"description": "LOGIN"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Create User',()=>{",
+							"\tif(pm.response.to.have.status(201)){",
+							"\t\tlet response = pm.response.json();",
+							"\t}",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "App-ID",
+						"value": "{{App-ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Device-ID",
+						"value": "{{Device-ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Device-Type",
+						"value": "{{Device-Type}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"zacky\",\n    \"job\": \"qa\"\n}"
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "LOGIN"
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Register',()=>{",
+							"\tif(pm.response.to.have.status(200)){",
+							"\t\tlet response = pm.response.json();",
+							"\t}",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "App-ID",
+						"value": "{{App-ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Device-ID",
+						"value": "{{Device-ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Device-Type",
+						"value": "{{Device-Type}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"eve.holt@reqres.in\",\n    \"password\": \"pistol\"\n}"
+				},
+				"url": {
+					"raw": "https://reqres.in/api/register",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "LOGIN"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Login',()=>{",
+							"\tif(pm.response.to.have.status(200)){",
+							"\t\tlet response = pm.response.json();",
+							"\t}",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "App-ID",
+						"value": "{{App-ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Device-ID",
+						"value": "{{Device-ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Device-Type",
+						"value": "{{Device-Type}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"eve.holt@reqres.in\",\n    \"password\": \"cityslicka\"\n}"
+				},
+				"url": {
+					"raw": "https://reqres.in/api/login",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "LOGIN"
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Update',()=>{",
+							"\tif(pm.response.to.have.status(200)){",
+							"\t\tlet response = pm.response.json();",
+							"\t}",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "App-ID",
+						"value": "{{App-ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Device-ID",
+						"value": "{{Device-ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Device-Type",
+						"value": "{{Device-Type}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"morpheus\",\n    \"job\": \"zion resident\"\n}"
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				},
+				"description": "LOGIN"
+			},
+			"response": []
+		},
+		{
+			"name": "List Single User",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('List Single User',()=>{",
+							"\tif(pm.response.to.have.status(200)){",
+							"\t\tlet response = pm.response.json();",
+							"\t}",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "App-ID",
+						"value": "{{App-ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Device-ID",
+						"value": "{{Device-ID}}",
+						"type": "text"
+					},
+					{
+						"key": "Device-Type",
+						"value": "{{Device-Type}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/12",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"12"
+					]
+				},
+				"description": "LOGIN"
+			},
+			"response": []
+		}
+	]
+}
